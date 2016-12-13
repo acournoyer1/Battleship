@@ -2,12 +2,8 @@ package Tests;
 
 import java.net.DatagramSocket;
 import java.net.InetAddress;
-import java.net.SocketException;
-import java.net.UnknownHostException;
-
 import Player.Setup.WaitDialog;
 import Server.GameThread;
-import Server.Server;
 import Utility.FullAddress;
 
 public interface QuickStart {
@@ -21,9 +17,7 @@ public interface QuickStart {
 	}
 	
 	public static void start() throws Exception
-	{
-		Server s = new Server();
-		
+	{		
 		DatagramSocket s1 = new DatagramSocket();
 		DatagramSocket s2 = new DatagramSocket();
 		

@@ -5,6 +5,11 @@ import java.net.DatagramSocket;
 import javax.swing.JFrame;
 
 public class MainGUI extends JFrame{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	@SuppressWarnings("unused")
 	private DatagramSocket socket;
 	
 	public MainGUI(DatagramSocket socket)
