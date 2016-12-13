@@ -1,6 +1,7 @@
 package Player.Setup;
 
 import java.awt.BorderLayout;
+import java.awt.Dimension;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyAdapter;
@@ -49,7 +50,8 @@ public class GameSelector extends JDialog{
 		this.add(getRefreshPanel(), BorderLayout.NORTH);
 		this.add(getGamePanel(), BorderLayout.CENTER);
 		this.add(getButtonPanel(), BorderLayout.SOUTH);
-		this.setSize(500,200);
+		this.getContentPane().setPreferredSize(new Dimension(500,200));
+		this.pack();
 		this.setResizable(false);
 		this.setTitle("Connect to Server");
 		this.setLocationRelativeTo(null);
