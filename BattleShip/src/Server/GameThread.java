@@ -48,6 +48,7 @@ public class GameThread extends Thread{
 	public void join(DatagramPacket p)
 	{
 		this.player2 = new FullAddress(p.getPort(), p.getAddress());
+		playerCount++;
 	}
 	
 	/**

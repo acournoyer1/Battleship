@@ -154,7 +154,6 @@ public class GameSelector extends JDialog{
 				}
 				if(p.getData()[1] == Messages.GAME_LIST_PACKET)
 				{
-					System.out.println("Refreshing");
 					gameList = new JList<Game>(getGames(p.getData()));
 				}
 			}
@@ -168,9 +167,13 @@ public class GameSelector extends JDialog{
 				{
 					joinButton.setEnabled(false);
 				}
-				else
+				else if(gameList.getSelectedValue().getPlayerCount() < 2)
 				{
 					joinButton.setEnabled(true);
+				}
+				else
+				{
+					joinButton.setEnabled(false);
 				}
 			}
 		});
@@ -236,7 +239,6 @@ public class GameSelector extends JDialog{
 		if(gameString.equals("Empty")) return new Game[0];
 		String[] gameSplit = gameString.split("\n");
 		Game[] games = new Game[gameSplit.length];
-		System.out.println(gameSplit.length);
 		for(int i = 0; i < gameSplit.length; i++)
 		{
 			String[] game = gameSplit[i].split(",");
